@@ -1,0 +1,83 @@
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    font-size: 1.05rem;
+    color: var(--color-texto-principal);
+    margin: 0;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: var(--fuente-secundaria);
+    color: var(--color-primario);
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.navbar-custom {
+    background-color: var(--color-primario) !important;
+}
+
+.navbar-custom .navbar-brand {
+    font-weight: bold;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.navbar-custom .nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-custom .nav-link:hover {
+    color: var(--color-secundario);
+}
+
+main.masthead {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/public/assets/img/bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    padding-top: 8rem;
+    padding-bottom: 4rem;
+}
+
+.card {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.692);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, box-shadow;
+}
+
+.card:hover,
+.card:focus-within {
+    background-color: white;
+    border: 3px solid var(--color-secundario);
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+}
+
+.card-title {
+    color: var(--color-primario);
+    font-weight: 800;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--fuente-secundaria);
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #000000;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-family: var(--fuente-principal);
+}
+
+
+footer p {
+    font-size: 0.9rem;
+}
