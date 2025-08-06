@@ -10,18 +10,12 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Auth\VerifyEmailController;
 
 // Página de inicio
-Route::get('/', fn() => view('intranet'))->name("intranet");
+Route::get('/', fn() => view('home'))->name("home");
 
 // Dashboard protegido
 Route::get('/dashboard', function () {
-    $user = Auth::user();
 
-    $faltanDatos = empty($user->numero_empleado)  ||
-        empty($user->puesto)           ||
-        empty($user->departamento)     ||
-        empty($user->telefono);
-
-    return view('dashboard', compact('faltanDatos'));
+    return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 // Rutas de autenticación con Google
@@ -51,7 +45,4 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
-    // Ruta para completar datos faltantes
-    Route::post('/user/update-missing', [UserDataController::class, 'updateMissingData'])->name('user.updateMissing');
 });

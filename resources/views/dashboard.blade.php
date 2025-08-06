@@ -15,7 +15,6 @@
         </div>
     </div>
 
-    <x-components.missing-data-modal :faltanDatos="$faltanDatos" />
 
 
 

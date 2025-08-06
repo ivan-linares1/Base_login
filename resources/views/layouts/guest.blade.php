@@ -34,7 +34,7 @@
             </span>
 
             <!-- boton que regresa el home (intranet) -->
-            <a href="{{ route('intranet') }}"><i class="fa-solid fa-house text-white"></i></a>
+            <a href="{{ route('home') }}"><i class="fa-solid fa-house text-white"></i></a>
             <!-- boton que regresa el home (dashboard) -->
 
         </div>
